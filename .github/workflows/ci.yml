@@ -1,0 +1,17 @@
+name: test
+
+on:
+  push:
+
+
+jobs:
+  test:
+      name: gcc
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v3
+      - name: Build
+        run: |
+          cmake .
+          make
+          make test
