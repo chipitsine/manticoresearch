@@ -7,7 +7,9 @@ on:
 jobs:
   test:
       name: gcc
-      runs-on: ubuntu-latest
+      runs-on: ubuntu-latest 
+      env:
+        CTEST_OUTPUT_ON_FAILURE: 1      
       steps:
       - uses: actions/checkout@v3
       - name: Build
